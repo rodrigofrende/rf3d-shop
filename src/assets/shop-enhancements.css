@@ -1,0 +1,317 @@
+/* ===== MEJORAS ESPECÍFICAS PARA LA TIENDA ===== */
+
+/* Mejorar apariencia de las tarjetas de filtros */
+.filters-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid rgba(37, 99, 235, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Efectos hover mejorados para filtros */
+.filter-dropdown:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 10px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Mejorar contraste de los placeholders */
+.p-dropdown .p-dropdown-label.p-placeholder {
+  color: #9ca3af !important;
+  font-weight: 400 !important;
+}
+
+/* Mejorar contraste del input de búsqueda */
+.search-input::placeholder {
+  color: #9ca3af !important;
+  font-weight: 400 !important;
+}
+
+/* Efectos de hover mejorados para botones de filtros */
+.filter-actions .p-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Mejorar contraste de las estadísticas del header */
+.header-stats {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mejorar contraste de los números de estadísticas */
+.stat-number {
+  background: linear-gradient(45deg, #ffffff, #f0f9ff) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-shadow: none !important;
+}
+
+/* Mejorar contraste de las etiquetas de estadísticas */
+.stat-label {
+  color: #f0f9ff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Mejorar contraste de los productos */
+.product-card {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  border-color: #d1d5db !important;
+}
+
+/* Mejorar contraste de las imágenes de productos */
+.product-image {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+}
+
+.product-image img {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.05) !important;
+}
+
+/* Mejorar contraste de los badges de productos */
+.product-badges .p-tag {
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mejorar contraste de las categorías de productos */
+.product-category .p-tag {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%) !important;
+  color: #1e40af !important;
+  border: 1px solid #93c5fd !important;
+  font-weight: 600 !important;
+  text-shadow: none !important;
+}
+
+/* Mejorar contraste de los ratings */
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: #fbbf24 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.p-rating .p-rating-item .p-rating-icon {
+  color: #d1d5db !important;
+}
+
+/* Mejorar contraste de los botones de acción */
+.product-actions .p-button {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-actions .p-button:hover {
+  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Mejorar contraste de los botones de overlay */
+.overlay-btn {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #374151 !important;
+  backdrop-filter: blur(10px) !important;
+  transition: all 0.3s ease !important;
+}
+
+.overlay-btn:hover {
+  background: rgba(255, 255, 255, 1) !important;
+  color: #1e40af !important;
+  transform: scale(1.1) !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+.overlay-btn.favorited {
+  background: rgba(239, 68, 68, 0.9) !important;
+  color: #ffffff !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
+}
+
+.overlay-btn.favorited:hover {
+  background: rgba(239, 68, 68, 1) !important;
+  transform: scale(1.1) !important;
+}
+
+/* Mejorar contraste de la vista de lista */
+.product-list-item {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.product-list-item:hover {
+  transform: translateX(8px) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  border-color: #d1d5db !important;
+}
+
+/* Mejorar contraste de las imágenes en vista de lista */
+.list-item-image {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden !important;
+}
+
+/* Mejorar contraste de los botones de vista */
+.view-options .p-button {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #6b7280 !important;
+  transition: all 0.3s ease !important;
+}
+
+.view-options .p-button:hover {
+  border-color: #d1d5db !important;
+  color: #374151 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.view-options .p-button.p-button-primary {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+.view-options .p-button.p-button-primary:hover {
+  background: #1e40af !important;
+  border-color: #1e40af !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Mejorar contraste de la paginación */
+.p-paginator {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Mejorar contraste de los botones de paginación */
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%) !important;
+  border-color: #2563eb !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Mejorar contraste del dropdown de páginas por página */
+.p-paginator .p-dropdown {
+  background: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  border-radius: 0.5rem !important;
+}
+
+.p-paginator .p-dropdown:hover {
+  border-color: #d1d5db !important;
+}
+
+.p-paginator .p-dropdown:not(.p-disabled).p-focus {
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Mejorar contraste del texto de reporte de página actual */
+.p-paginator .p-paginator-current {
+  color: #374151 !important;
+  font-weight: 500 !important;
+}
+
+/* Mejorar contraste del loading spinner */
+.p-progress-spinner {
+  filter: drop-shadow(0 4px 8px rgba(37, 99, 235, 0.2)) !important;
+}
+
+/* Mejorar contraste de los tooltips */
+.p-tooltip .p-tooltip-text {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .filters-card {
+    margin: 0 1rem !important;
+  }
+  
+  .filters-content {
+    padding: 1.5rem !important;
+  }
+  
+  .search-wrapper {
+    max-width: none !important;
+  }
+  
+  .filters-row {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .filter-group {
+    min-width: auto !important;
+  }
+  
+  .header-stats {
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+    padding: 1.5rem !important;
+  }
+  
+  .stat-item:not(:last-child) {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .filters-content {
+    padding: 1rem !important;
+  }
+  
+  .search-section {
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .filter-actions {
+    width: 100% !important;
+  }
+  
+  .filter-actions .p-button {
+    width: 100% !important;
+  }
+  
+  .header-title {
+    font-size: 1.875rem !important;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem !important;
+  }
+}

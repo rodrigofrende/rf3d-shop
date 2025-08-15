@@ -1,0 +1,257 @@
+/* ===== CORRECCIONES DE CONTRASTE PARA MEJORAR LA LEGIBILIDAD ===== */
+
+:root {
+  /* Definir colores primarios que faltan */
+  --primary-color: #2563eb;
+  --secondary-color: #7c3aed;
+  
+  /* Colores mejorados para mejor contraste */
+  --text-on-light-bg: #1f2937; /* Gris muy oscuro para texto sobre fondos claros */
+  --text-on-dark-bg: #ffffff;  /* Blanco puro para texto sobre fondos oscuros */
+  --icon-on-light-bg: #374151; /* Gris oscuro para iconos sobre fondos claros */
+  --icon-on-dark-bg: #ffffff;  /* Blanco puro para iconos sobre fondos oscuros */
+  
+  /* Colores de fondo mejorados para navegación */
+  --nav-bg-hover: #f3f4f6;
+  --nav-bg-active: #dbeafe;
+  --nav-text-hover: #1e40af;
+  --nav-text-active: #1e40af;
+}
+
+/* ===== CORRECCIONES DEL HEADER ===== */
+
+/* Mejorar contraste de la navegación */
+.nav-link {
+  color: var(--text-on-light-bg) !important;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-color) !important;
+  background: var(--nav-bg-hover) !important;
+}
+
+.nav-link.router-link-active {
+  color: var(--nav-text-active) !important;
+  background: var(--nav-bg-active) !important;
+  font-weight: 600;
+}
+
+/* Mejorar contraste del logo */
+.logo-subtitle {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+/* ===== CORRECCIONES DEL HERO SECTION ===== */
+
+/* Mejorar contraste de los botones de acción */
+.hero-actions .p-button {
+  font-weight: 600;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-actions .p-button-outlined {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: var(--primary-color) !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.hero-actions .p-button-outlined:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
+}
+
+/* Mejorar contraste de las tarjetas flotantes */
+.floating-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: var(--text-on-light-bg) !important;
+  border: 2px solid rgba(37, 99, 235, 0.2) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+}
+
+.floating-card i {
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+
+.floating-card span {
+  font-weight: 600;
+  color: var(--text-on-light-bg) !important;
+}
+
+/* ===== CORRECCIONES DE SECCIONES ===== */
+
+/* Mejorar contraste de títulos de sección */
+.section-title {
+  color: var(--text-on-light-bg) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.section-subtitle {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+/* ===== CORRECCIONES DE PRODUCTOS ===== */
+
+/* Mejorar contraste de información de productos */
+.product-name {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 600;
+}
+
+.product-description {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+.product-price {
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== CORRECCIONES DE CATEGORÍAS ===== */
+
+/* Mejorar contraste de tarjetas de categoría */
+.category-title {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 600;
+}
+
+.category-count {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+.category-icon {
+  color: var(--primary-color) !important;
+}
+
+/* ===== CORRECCIONES DE TESTIMONIOS ===== */
+
+/* Mejorar contraste de testimonios */
+.testimonial-text {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+.author-name {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 600;
+}
+
+.author-title {
+  color: var(--text-on-light-bg) !important;
+  font-weight: 500;
+}
+
+/* ===== CORRECCIONES DE BOTONES ===== */
+
+/* Mejorar contraste de botones outline */
+.p-button-outlined {
+  border-width: 2px !important;
+  font-weight: 600 !important;
+}
+
+.p-button-outlined.p-button-secondary {
+  color: var(--secondary-color) !important;
+  border-color: var(--secondary-color) !important;
+}
+
+.p-button-outlined.p-button-secondary:hover {
+  background: var(--secondary-color) !important;
+  color: white !important;
+}
+
+/* ===== CORRECCIONES DE TARJETAS ===== */
+
+/* Mejorar contraste de tarjetas */
+.card {
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* ===== CORRECCIONES DE ICONOS ===== */
+
+/* Mejorar contraste de iconos en general */
+.pi {
+  font-weight: bold;
+}
+
+/* ===== CORRECCIONES DE RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  /* Asegurar que los textos sean legibles en móvil */
+  .hero-title {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .hero-subtitle {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  .floating-card {
+    background: rgba(255, 255, 255, 0.98) !important;
+    border: 2px solid rgba(37, 99, 235, 0.3) !important;
+  }
+}
+
+/* ===== MEJORAS DE ACCESIBILIDAD ===== */
+
+/* Asegurar contraste mínimo de 4.5:1 para texto normal */
+.text-primary,
+.text-secondary,
+.text-success,
+.text-warning,
+.text-error,
+.text-info {
+  font-weight: 500;
+}
+
+/* Mejorar focus visible para navegación por teclado */
+.nav-link:focus,
+.btn:focus,
+.card:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* ===== ANIMACIONES SUAVES ===== */
+
+/* Transiciones suaves para todos los elementos interactivos */
+.nav-link,
+.btn,
+.card,
+.floating-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== CORRECCIONES ESPECÍFICAS PARA PRIMEVUE ===== */
+
+/* Mejorar contraste de componentes PrimeVue */
+.p-button {
+  font-weight: 600 !important;
+}
+
+.p-card {
+  border: 1px solid #e5e7eb !important;
+}
+
+.p-tag {
+  font-weight: 600 !important;
+}
+
+.p-rating .p-rating-item.p-rating-item-active .p-rating-icon {
+  color: #fbbf24 !important;
+}
+
+.p-rating .p-rating-item .p-rating-icon {
+  color: #d1d5db !important;
+}
