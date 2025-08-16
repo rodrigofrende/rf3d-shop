@@ -10,6 +10,7 @@ import Menu from 'primevue/menu'
 import Badge from 'primevue/badge'
 import InputText from 'primevue/inputtext'
 import Toast from 'primevue/toast'
+import AuthLoader from './components/AuthLoader.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -59,6 +60,7 @@ const subscribeNewsletter = () => {
 
 <template>
   <div id="app-layout">
+    <AuthLoader />
     <Toast />
     
     <!-- Header -->
@@ -385,10 +387,20 @@ const subscribeNewsletter = () => {
 
 .user-button {
   font-weight: var(--font-weight-medium);
+  transition: all 0.2s ease;
+  border-radius: 0.5rem;
+}
+
+.user-button:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .user-menu {
-  min-width: 200px;
+  min-width: 220px;
+  z-index: var(--z-dropdown);
 }
 
 .auth-buttons {

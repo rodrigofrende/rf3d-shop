@@ -1,0 +1,12 @@
+specVersion: "v1"
+serviceId: "pokemon-3d-shop"
+location: "us-central1"
+schema:
+  source: "./schema"
+  datasource:
+    postgresql:
+      database: "fdcdb"
+      cloudSql:
+        instanceId: "pokemon-3d-shop-fdc"
+      # schemaValidation: "COMPATIBLE"
+connectorDirs: ["./connector"]

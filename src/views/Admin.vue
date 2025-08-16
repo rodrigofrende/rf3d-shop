@@ -328,7 +328,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-import { useAuthStore } from '../stores/auth'
+import { useAuthGuard } from '../composables/useAuthGuard'
 
 import FirebaseService from '../services/firebaseService'
 import Button from 'primevue/button'
@@ -343,9 +343,11 @@ import Column from 'primevue/column'
 import Dialog from 'primevue/dialog'
 import ProgressSpinner from 'primevue/progressspinner'
 import Toast from 'primevue/toast'
+import { useToast } from 'primevue/usetoast'
 import Tooltip from 'primevue/tooltip'
 
-const authStore = useAuthStore()
+const { isReady, isAuthenticated, user } = useAuthGuard()
+const toast = useToast()
 
 
 // Reactive data
@@ -613,8 +615,22 @@ const formatDate = (date) => {
 
 // Lifecycle
 onMounted(async () => {
+  // Esperar a que se complete la inicialización de autenticación
+  if (!isReady.value) {
+    await new Promise(resolve => {
+      const checkAuth = () => {
+        if (isReady.value) {
+          resolve()
+        } else {
+          setTimeout(checkAuth, 100)
+        }
+      }
+      checkAuth()
+    })
+  }
+
   // Verificar si el usuario está autenticado
-  if (!authStore.isAuthenticated) {
+  if (!isAuthenticated.value) {
     toast.add({
       severity: 'warn',
       summary: 'Acceso Restringido',

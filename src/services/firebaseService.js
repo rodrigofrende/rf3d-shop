@@ -19,6 +19,11 @@ const firebaseConfig = {
 // Inicializar Firebase
 const app = initializeApp(firebaseConfig)
 const auth = getAuth(app)
+
+// Configurar persistencia de sesión
+// Firebase Auth v9+ mantiene la sesión por defecto
+// No necesitamos setPersistence manualmente
+
 const db = getFirestore(app)
 const storage = getStorage(app)
 

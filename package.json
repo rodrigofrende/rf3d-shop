@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@firebasegen/default-connector": "file:dataconnect-generated/js/default-connector",
     "@vueuse/core": "^13.6.0",
     "firebase": "^12.1.0",
     "googleapis": "^156.0.0",

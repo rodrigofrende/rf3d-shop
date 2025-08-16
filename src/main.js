@@ -27,20 +27,7 @@ import Login from './views/Login.vue'
 import Profile from './views/Profile.vue'
 import Admin from './views/Admin.vue'
 
-// Firebase configuration
-import { initializeApp, getApps } from 'firebase/app'
-import { getAuth } from 'firebase/auth'
-import { firebaseConfig } from './firebase-config'
-
-// Initialize Firebase - Solo si no está ya inicializado
-let firebaseApp
-if (getApps().length === 0) {
-  firebaseApp = initializeApp(firebaseConfig)
-} else {
-  firebaseApp = getApps()[0]
-}
-
-export const auth = getAuth(firebaseApp)
+// Firebase se inicializa en firebaseService.js
 
 // Router configuration
 const routes = [
@@ -68,5 +55,11 @@ app.use(PrimeVue, {
   inputStyle: 'outlined'
 })
 app.use(ToastService)
+
+// Inicializar autenticación antes de montar la app
+import { useAuthStore } from './stores/auth'
+const authStore = useAuthStore()
+authStore.restoreSession() // Restaurar sesión desde localStorage
+authStore.initAuth() // Configurar listener de Firebase
 
 app.mount('#app')

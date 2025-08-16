@@ -104,28 +104,44 @@
 /* Menú */
 .p-menu {
   border: 1px solid #e5e7eb !important;
-  border-radius: 0.5rem !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !important;
+  background: white !important;
+  min-width: 220px !important;
+  padding: 0.5rem 0 !important;
 }
 
 .p-menu .p-menuitem-link {
   color: #374151 !important;
   font-weight: 500 !important;
-  padding: 0.75rem 1rem !important;
+  padding: 0.875rem 1.25rem !important;
+  border-radius: 0.5rem !important;
+  margin: 0 0.5rem !important;
+  transition: all 0.2s ease !important;
 }
 
 .p-menu .p-menuitem-link:hover {
-  background: #f3f4f6 !important;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb) !important;
   color: #1e40af !important;
+  transform: translateX(4px) !important;
 }
 
 .p-menu .p-menuitem-link .p-menuitem-icon {
   color: #6b7280 !important;
-  margin-right: 0.5rem !important;
+  margin-right: 0.75rem !important;
+  font-size: 1rem !important;
+  transition: color 0.2s ease !important;
 }
 
 .p-menu .p-menuitem-link:hover .p-menuitem-icon {
   color: #1e40af !important;
+}
+
+/* Separador del menú */
+.p-menu .p-menuitem-separator {
+  margin: 0.5rem 1rem !important;
+  border-top: 1px solid #e5e7eb !important;
+  opacity: 0.6 !important;
 }
 
 /* Toast */
